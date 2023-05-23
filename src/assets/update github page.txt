@@ -1,0 +1,25 @@
+If you have already built your Angular app with the production configuration and published it to the `docs` folder on GitHub, you don't need to run the build command again unless you have made further changes to your app and want to update the GitHub Pages version.
+
+If you have made updates to your Angular app and want to reflect those changes on your GitHub Pages, you should follow these steps:
+
+1. Make sure you are in the root directory of your Angular project.
+
+2. Run the following command to build your app with the production configuration:
+
+   ```bash
+   ng build --configuration=production --output-path docs --base-href /portfolio-app/
+   ```
+
+   This will generate an updated production build of your app in the `docs` folder.
+
+3. Commit and push the changes to your GitHub repository. Use the following commands:
+
+   ```bash
+   git add .
+   git commit -m "Update app for GitHub Pages"
+   git push origin main
+   ```
+
+   This will push the changes, including the updated build files, to your GitHub repository.
+
+After completing these steps, your GitHub Pages should be updated with the latest version of your Angular app.
