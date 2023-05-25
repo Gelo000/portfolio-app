@@ -135,7 +135,17 @@ html {
 
 .navbar-toggler {
     border: none;
-}
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    border: none;
+    color: transparent;
+    outline: none;
+  }
+  
 
 /* FOR NAVBAR TOGGLE open/close */
 @keyframes slideIn {
