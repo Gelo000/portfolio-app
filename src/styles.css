@@ -48,6 +48,8 @@ html {
 }
 
 .custom-bg-darkgray{
+    background-image: linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
     background-color: rgb(65, 65, 65);
     color: white;
 }
@@ -114,10 +116,76 @@ html {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+.custom-navbar {
+    border-radius: 50px; /* Adjust the border-radius value to make the navbar more or less oval */
+    overflow: hidden;
+    background-color: #3f4847;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.custom-nav-items {
+    display: flex;
+    justify-content: center;
+}
+  
+.custom-nav-items .nav-item {
+    text-align: center;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* FOR NAVBAR TOGGLE open/close */
+@keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+  
+@keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+}
+  
+.show {
+    display: block !important;
+}
+  
+.collapse {
+    display: none;
+}
+  
+/* FOR NAVBAR TOGGLE open/close */
+  
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
   
 .navbar {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgb(65, 65, 65);
+    background-color: transparent;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -140,7 +208,7 @@ html {
 }
 
 #id-card-home{
-    background-color: rgba(0, 255, 213, 0.035);
+    background-color: #3f4847;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 2rem;
 }
@@ -149,13 +217,46 @@ html {
     padding: 3rem;
 }
 
+#id-card-about{
+    background-color: transparent;
+    border: 0px;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+#id-card-tech{
+    background-color: #0b7e715b;
+}
+
+.tech-icon {
+    width: 100%;
+    max-width: 48px;
+    height: 48px;
+    max-height: 38px;
+}
+
+#container-about {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    line-height: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #3f4847
+}
+
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 2s ease;
   }
   
 .fade-in.visible {
     opacity: 1;
 }
+
+.main-container {
+    position: relative;
+    z-index: 2;
+}
+
   
   
