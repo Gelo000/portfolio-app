@@ -1,27 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">My Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container custom-navbar">
+    <a class="navbar-brand text-light" href="#">Angelo's Portfolio</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="isNavbarCollapsed ? 'false' : 'true'" aria-controls="navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': !isNavbarCollapsed}" [ngStyle]="{'animation': isNavbarCollapsed ? 'slideOut 0.3s' : 'slideIn 0.3s'}" id="navbarNav">
+      <ul class="navbar-nav custom-nav-items">
         <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#home">
+            <i class="fas fa-home"></i> Home
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#about">
+            <i class="fas fa-user"></i> About
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#projects">
+            <i class="fas fa-code"></i> Projects
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#contact">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-  
-  
