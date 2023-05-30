@@ -227,7 +227,7 @@ html {
     padding: 3rem;
 }
 
-#id-card-about{
+#id-card-section{
     background-color: transparent;
     border: 0px;
     padding: 3rem;
@@ -245,7 +245,7 @@ html {
     max-height: 38px;
 }
 
-#container-about {
+#container-section {
     display: flex;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -268,5 +268,32 @@ html {
     z-index: 2;
 }
 
+.zoom-effect {
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+  }
+  
+.zoom-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+  
+.zoom-effect:hover .zoom-inner {
+    transform: scale(1.05);
+}
+  
+.zoom-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
   
   
