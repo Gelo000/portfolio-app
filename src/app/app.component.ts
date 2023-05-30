@@ -27,4 +27,7 @@ export class AppComponent implements AfterViewInit {
       }
     });
   }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
