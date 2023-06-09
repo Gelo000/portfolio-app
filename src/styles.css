@@ -5,6 +5,7 @@
 /* width */
 html {
     background-color: rgb(65, 65, 65);
+    overflow-x: hidden;
 }
   
 ::-webkit-scrollbar {
@@ -244,13 +245,64 @@ html {
     background-color: #3f4847
 }
 
-.fade-in {
+.fade-in-scroll-button {
     opacity: 0;
-    transition: opacity 2s ease;
+    z-index: 9999;
+    transition: opacity 1s ease;
   }
   
-.fade-in.visible {
+.fade-in-scroll-button.visible {
     opacity: 1;
+    z-index: 9999;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-opposite{
+    opacity: 0;
+  }
+  
+  .fade-in-opposite.visible {
+    opacity: 0;
+    animation: fadeInLeft 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+.container-home-center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container {
@@ -258,5 +310,72 @@ html {
     z-index: 2;
 }
 
+<<<<<<< Updated upstream
+=======
+.zoom-effect {
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+  }
+  
+.zoom-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+  
+.zoom-effect:hover .zoom-inner {
+    transform: scale(1.05);
+}
+  
+.zoom-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+  
+  
+.zoom-effect:hover .zoom-inner {
+    transform: scale(1.05);
+}
+  
+.zoom-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 255, 191, 0.2);
+    color: rgb(0, 255, 213);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+}
+  
+.scroll-top-btn:hover {
+    background-color: #555;
+}
+  
+  
+>>>>>>> Stashed changes
   
   
