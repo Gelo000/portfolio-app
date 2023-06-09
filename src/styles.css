@@ -5,6 +5,7 @@
 /* width */
 html {
     background-color: rgb(65, 65, 65);
+    overflow-x: hidden;
 }
   
 ::-webkit-scrollbar {
@@ -255,13 +256,64 @@ html {
     background-color: #3f4847
 }
 
-.fade-in {
+.fade-in-scroll-button {
     opacity: 0;
-    transition: opacity 2s ease;
+    z-index: 9999;
+    transition: opacity 1s ease;
   }
   
-.fade-in.visible {
+.fade-in-scroll-button.visible {
     opacity: 1;
+    z-index: 9999;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-opposite{
+    opacity: 0;
+  }
+  
+  .fade-in-opposite.visible {
+    opacity: 0;
+    animation: fadeInLeft 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+.container-home-center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container {
@@ -269,6 +321,8 @@ html {
     z-index: 2;
 }
 
+<<<<<<< Updated upstream
+=======
 .zoom-effect {
     overflow: hidden;
     position: relative;
@@ -325,7 +379,7 @@ html {
     padding: 15px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 9999;
 }
   
 .scroll-top-btn:hover {
@@ -333,5 +387,6 @@ html {
 }
   
   
+>>>>>>> Stashed changes
   
   
