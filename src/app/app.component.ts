@@ -5,10 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-<<<<<<< Updated upstream
-export class AppComponent {
-  title = 'portfolio-app';
-=======
 export class AppComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
@@ -56,5 +52,4 @@ export class AppComponent implements AfterViewInit {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
->>>>>>> Stashed changes
 }
