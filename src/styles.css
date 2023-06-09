@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .navbar {
     background-color: rgb(65, 65, 65);
+    overflow-x: hidden;
 }
   
 .footer{
@@ -18,3 +19,186 @@
 .navbar-light .navbar-nav .nav-link {
     color: rgb(0, 255, 213);
 }
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+}
+  
+.navbar-light .navbar-nav .nav-link.active {
+    color: white;
+}
+
+#id-card-home{
+    background-color: #3f4847;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+#id-card-image{
+    padding: 3rem;
+}
+
+#id-card-section{
+    background-color: transparent;
+    border: 0px;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+#id-card-tech{
+    background-color: #0b7e715b;
+}
+
+.tech-icon {
+    width: 100%;
+    max-width: 48px;
+    height: 48px;
+    max-height: 38px;
+}
+
+#container-section {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    line-height: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #3f4847
+}
+
+.fade-in-scroll-button {
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+  
+.fade-in-scroll-button.visible {
+    opacity: 1;
+    z-index: 9999;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-opposite{
+    opacity: 0;
+  }
+  
+  .fade-in-opposite.visible {
+    opacity: 0;
+    animation: fadeInLeft 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+.container-home-center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    position: relative;
+    z-index: 2;
+}
+
+.zoom-effect {
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+  }
+  
+.zoom-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+  
+.zoom-effect:hover .zoom-inner {
+    transform: scale(1.05);
+}
+  
+.zoom-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+  
+  
+.zoom-effect:hover .zoom-inner {
+    transform: scale(1.05);
+}
+  
+.zoom-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 255, 191, 0.2);
+    color: rgb(0, 255, 213);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+}
+  
+.scroll-top-btn:hover {
+    background-color: #555;
+}
+  
+  
+  
+  
