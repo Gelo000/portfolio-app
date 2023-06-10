@@ -48,13 +48,29 @@ html {
     padding-top: 60px;
 }
 
-.custom-bg-darkgray{
-    background-image: linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px);
+.custom-bg-darkgray {
+    background-image: 
+        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px);
     background-size: 20px 20px;
     background-color: rgb(65, 65, 65);
     color: white;
     background-attachment: fixed;
+    animation: wavy 150s infinite linear;
 }
+
+@keyframes wavy {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+  
 
 .custom-text-color-teal{
     color: rgb(0, 255, 213);
@@ -120,7 +136,7 @@ html {
 }
 
 .custom-navbar {
-    border-radius: 50px; /* Adjust the border-radius value to make the navbar more or less oval */
+    border-radius: 1rem; /* Adjust the border-radius value to make the navbar more or less oval */
     overflow: hidden;
     background-color: #3f4847;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -141,12 +157,12 @@ html {
     outline: none;
   }
   
-  .navbar-toggler:focus,
-  .navbar-toggler:active {
+.navbar-toggler:focus,
+.navbar-toggler:active {
     border: none;
     color: transparent;
     outline: none;
-  }
+}
   
 
 /* FOR NAVBAR TOGGLE open/close */
@@ -217,6 +233,7 @@ html {
   
 .navbar-light .navbar-nav .nav-link.active {
     color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 #id-card-home{
@@ -258,12 +275,12 @@ html {
 
 .fade-in-scroll-button {
     opacity: 0;
-    z-index: 9999;
     transition: opacity 1s ease;
   }
   
 .fade-in-scroll-button.visible {
     opacity: 1;
+    pointer-events: default;
     z-index: 9999;
 }
 
@@ -287,7 +304,7 @@ html {
   }
 }
 
-.fade-in-opposite{
+/* .fade-in-opposite{
     opacity: 0;
   }
   
@@ -305,7 +322,7 @@ html {
       opacity: 1;
       transform: translateX(0);
     }
-  }
+  } */
   
 
 .container-home-center{
