@@ -7,7 +7,7 @@ import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/cor
 })
 export class AppComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
-
+  title = 'portfolio-app';
   ngAfterViewInit() {
     this.checkScroll();
   }
@@ -15,11 +15,9 @@ export class AppComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const elements = this.elementRef.nativeElement.querySelectorAll('.fade-in');
+    const windowBottom = window.innerHeight + window.scrollY;
     const elementsButton = this.elementRef.nativeElement.querySelectorAll('.fade-in-scroll-button');
-    const elementsOpposite = this.elementRef.nativeElement.querySelectorAll('.fade-in-opposite');
-    const windowBottom = window.innerHeight + window.pageYOffset;
-    const windowBottomButton = window.innerHeight + window.pageYOffset;
-    const windowBottomOpposite = window.innerHeight + window.pageYOffset;
+    const windowBottomButton = window.innerHeight + window.scrollY;
 
     elements.forEach((element: HTMLElement) => {
       const elementTop = element.offsetTop;
@@ -30,24 +28,19 @@ export class AppComponent implements AfterViewInit {
         element.classList.remove('visible');
       }
     });
+
     elementsButton.forEach((element: HTMLElement) => {
       const elementTop = element.offsetTop;
-
+    
       if (elementTop < windowBottomButton) {
         element.classList.add('visible');
+        element.removeAttribute('disabled');
       } else {
         element.classList.remove('visible');
+        element.setAttribute('disabled', 'disabled');
       }
     });
-    elementsOpposite.forEach((element: HTMLElement) => {
-      const elementTopOpposite = element.offsetTop;
-
-      if (elementTopOpposite < windowBottomOpposite) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+    
   }
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -4,7 +4,7 @@
   <app-home></app-home>
 </div>
 
-<div id="about" class="custom-padding-top-60 fade-in-opposite">
+<div id="about" class="custom-padding-top-60 fade-in">
   <app-about></app-about>
 </div>
 
@@ -12,7 +12,13 @@
   <app-projects></app-projects>
 </div>
 
-<div id="contact" class="custom-padding-top-60 fade-in-opposite">
+<div class="custom-padding-top-60 fade-in-scroll-button">
+  <button class="scroll-top-btn" (click)="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>
+
+<div id="contact" class="custom-padding-top-60 fade-in">
   <app-contact></app-contact>
 </div>
 
