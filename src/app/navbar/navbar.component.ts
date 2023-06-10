@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  isNavbarCollapsed = true;
+  isNavbarCollapsed: boolean = true;
 
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
+  navbarAnimationStyle() {
+    if (this.isNavbarCollapsed) {
+      return {};
+    } else {
+      return { 'animation': 'slideIn 0.5s' };
+    }
   }
 }

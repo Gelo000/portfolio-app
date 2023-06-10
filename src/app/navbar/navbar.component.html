@@ -4,7 +4,7 @@
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="isNavbarCollapsed ? 'false' : 'true'" aria-controls="navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': !isNavbarCollapsed}" [ngStyle]="{'animation': isNavbarCollapsed ? 'slideOut 0.3s' : 'slideIn 0.3s'}" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-center justify-content-lg-end" [ngClass]="{'show': !isNavbarCollapsed}" [ngStyle]="navbarAnimationStyle()" id="navbarNav">
       <ul class="navbar-nav custom-nav-items">
         <li class="nav-item">
           <a class="nav-link" href="#home">
