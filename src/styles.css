@@ -58,10 +58,10 @@ html {
     background-color: rgb(65, 65, 65);
     color: white;
     background-attachment: fixed;
-    animation: wavy 150s infinite linear;
+    animation: downrightanimation 150s infinite linear;
 }
 
-@keyframes wavy {
+@keyframes downrightanimation {
     0% {
         background-position: 0 0;
     }
@@ -240,6 +240,7 @@ html {
     background-color: #3f4847;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 2rem;
+    margin-top: -10%;
 }
 
 #id-card-image{
