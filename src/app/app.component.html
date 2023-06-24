@@ -24,10 +24,30 @@
   </div>
 </nav>
 
-<div id="home">
+<section id="home" class="custom-padding-top-120 fade-in">
   <app-home></app-home>
+</section>
+
+<section id="about" class="custom-padding-top-120 fade-in">
+  <app-about></app-about>
+</section>
+
+<section id="projects" class="custom-padding-top-120 fade-in">
+  <app-projects></app-projects>
+</section>
+
+<div class="custom-padding-top-120 fade-in-scroll-button">
+  <button class="scroll-top-btn" (click)="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 </div>
 
-<div id="about">
-  <app-about></app-about>
-</div>
+<section id="contact" class="custom-padding-top-120 fade-in">
+  <app-contact></app-contact>
+</section>
+
+<footer class="footer navbar-light custom-footer">
+  <div class="container text-center">
+    <span>&copy; 2023 Made by Angelo Milan Santos.</span>
+  </div>
+</footer>

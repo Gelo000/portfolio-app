@@ -39,8 +39,8 @@
     margin-top: 160px;
 }
 
-.custom-padding-top-60{
-    padding-top: 60px;
+.custom-padding-top-120{
+    padding-top: 120px;
 }
 
 .custom-bg-darkgray {
@@ -135,6 +135,11 @@
     overflow: hidden;
     background-color: #3f4847;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-container-id{
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
   
 .custom-nav-items {
@@ -284,17 +289,17 @@
 
 .fade-in.visible {
     opacity: 0;
-    animation: fadeInRight 1s ease-in-out forwards;
+    animation: fadeInRight 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(100%);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -325,6 +330,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -30px;
 }
 
 .main-container {
@@ -393,4 +399,21 @@
   
 .scroll-top-btn:hover {
     background-color: #555;
+}
+
+#ams-logo-id{
+    height: 5rem;
+    width: 5rem;
+    padding: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+#ams-logo-id:hover{
+    border: 1px solid rgba(0, 255, 213, 0.301);
+}
+
+.frosted-div {
+    background-color: #3f48472a;
+    backdrop-filter: blur(2px);
 }
