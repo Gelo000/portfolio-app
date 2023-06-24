@@ -154,10 +154,6 @@ html {
     align-items: center;
     margin-left: 40px;
 }
-  
-/* .custom-nav-items .nav-item {
-    text-align: center;
-} */
 
 .navbar-toggler {
     border: none;
@@ -252,7 +248,14 @@ html {
 }
 
 #id-card-image{
-    padding: 3rem;
+    background-color: #292e2e;
+    border-radius: 25%;
+    transform: rotate(8deg) scale(70%);
+}
+.card-img-top-box{
+    transform: rotate(-8deg);
+    background-color: #808080;
+    border-radius: 25%;
 }
 
 #id-card-section{
@@ -290,8 +293,16 @@ html {
 .fade-in-scroll-button.visible {
     opacity: 1;
     pointer-events: default;
-    z-index: 9999;
 }
+
+/* .fade-in {
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+  
+.fade-in.visible {
+    opacity: 1;
+} */
 
 .fade-in {
     opacity: 0;
@@ -305,7 +316,7 @@ html {
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(50%);
   }
   100% {
     opacity: 1;
