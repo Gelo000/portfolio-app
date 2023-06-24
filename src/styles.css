@@ -144,12 +144,15 @@
   
 .custom-nav-items {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-left: 40px;
 }
   
-.custom-nav-items .nav-item {
+/* .custom-nav-items .nav-item {
     text-align: center;
-}
+} */
 
 .navbar-toggler {
     border: none;
@@ -269,7 +272,7 @@
     padding-bottom: 5rem;
     line-height: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #3f4847
+    background-color: #3f4847;
 }
 
 .fade-in-scroll-button {
@@ -414,6 +417,6 @@
 }
 
 .frosted-div {
-    background-color: #3f48472a;
-    backdrop-filter: blur(2px);
+    background-color: #3f48472a !important;
+    backdrop-filter: blur(2px) !important;
 }
