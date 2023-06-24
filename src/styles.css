@@ -16,6 +16,182 @@
     justify-content: center;
 }
 
+.custom-padding-top-120{
+    padding-top: 120px;
+}
+
+.custom-bg-darkgray {
+    background-image: 
+        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    background-attachment: fixed;
+    animation: downrightanimation 150s infinite linear;
+}
+
+@keyframes downrightanimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+  
+
+.custom-text-color-teal{
+    color: rgb(0, 255, 213);
+}
+
+.custom-text-color-white{
+    color: rgb(255, 255, 255);
+}
+
+.custom-description-larger-text {
+    font-size: calc(1rem + ((1vw - 7.68px) * 1.2));
+    line-height: 1;
+}
+
+.custom-text-color-grey{
+    color: rgb(192, 192, 192);
+}
+
+.custom-text-color-white-bold{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.custom-welcome-text {
+    background-color: rgb(65, 65, 65);
+    color: rgb(0, 255, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: calc(1rem + ((1vw - 7.68px) * 5.555555555555555));
+}
+
+.custom-russo-one-text {
+    font-family: 'Russo One', sans-serif;
+    font-size: calc(3rem + ((1vw - 7.68px) * 5.555555555555555));
+}
+
+.custom-button {
+    color: rgb(0, 255, 213);
+    background-color: rgb(59, 59, 59);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 0.2rem rgba(24, 24, 24, 0.25);
+    transition: background-color 0.3s ease;
+}
+  
+.custom-button:hover {
+    background-color: rgb(0, 150, 125);
+    color: rgb(0, 0, 0);
+}
+  
+.custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-navbar {
+    border-radius: 1rem; /* Adjust the border-radius value to make the navbar more or less oval */
+    overflow: hidden;
+    background-color: #3f4847;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-container-id{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+  
+.custom-nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border: none;
+    color: transparent;
+    outline: none;
+}
+  
+
+/* FOR NAVBAR TOGGLE open/close */
+@keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+  
+@keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+}
+  
+.show {
+    display: block !important;
+}
+  
+.collapse {
+    display: none;
+}
+  
+/* FOR NAVBAR TOGGLE open/close */
+  
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+.navbar {
+    background-color: transparent;
+}
+
 .navbar-light .navbar-nav .nav-link {
     color: rgb(0, 255, 213);
 }
@@ -41,7 +217,14 @@
 }
 
 #id-card-image{
-    padding: 3rem;
+    background-color: #292e2e;
+    border-radius: 25%;
+    transform: rotate(8deg) scale(70%);
+}
+.card-img-top-box{
+    transform: rotate(-8deg);
+    background-color: #808080;
+    border-radius: 25%;
 }
 
 #id-card-section{
@@ -79,8 +262,17 @@
   
 .fade-in-scroll-button.visible {
     opacity: 1;
-    z-index: 9999;
+    pointer-events: default;
 }
+
+/* .fade-in {
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+  
+.fade-in.visible {
+    opacity: 1;
+} */
 
 .fade-in {
     opacity: 0;
@@ -94,7 +286,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(50%);
   }
   100% {
     opacity: 1;
