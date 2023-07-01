@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
+import { CircleCanvasAnimationComponent } from './circle-canvas-animation/circle-canvas-animation.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LoadingScreenComponent } from './loading-screen/loading-screen.componen
     HomeComponent,
     ProjectsComponent,
     ContactComponent,
-    LoadingScreenComponent
+    LoadingScreenComponent,
+    CircleCanvasAnimationComponent
   ],
   imports: [
     BrowserModule,
