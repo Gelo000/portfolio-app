@@ -6,23 +6,31 @@
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="isNavbarCollapsed ? 'false' : 'true'" aria-controls="navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center justify-content-lg-end" [ngClass]="{'show': !isNavbarCollapsed}" [ngStyle]="navbarAnimationStyle()" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-center justify-content-lg-center" [ngClass]="{'show': !isNavbarCollapsed}" [ngStyle]="navbarAnimationStyle()" id="navbarNav">
       <ul class="navbar-nav custom-nav-items">
         <li class="nav-item">
           <a class="nav-link" href="#home">
-            <i class="fas fa-home"></i> Home</a>
+            <i class="fas fa-home"></i>
+            <span class="nav-text"> Home</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#about">
-            <i class="fas fa-user"></i> About</a>
+            <i class="fas fa-user"></i>
+            <span class="nav-text"> About</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#projects">
-            <i class="fas fa-code"></i> Projects</a>
+            <i class="fas fa-code"></i>
+            <span class="nav-text"> Projects</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">
-            <i class="fas fa-envelope"></i> Contact</a>
+            <i class="fas fa-envelope"></i>
+            <span class="nav-text"> Contact</span>
+          </a>
         </li>
       </ul>
     </div>
