@@ -344,7 +344,31 @@ html {
 .zoom-inner {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s;
+}
+
+.zoom-inner .custom-button {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.zoom-inner:hover .custom-button {
+    position: absolute;
+    opacity: 1;
+}
+
+.zoom-inner img {
+    filter: brightness(1);
+    transition: 0.5s ease-in-out;
+}
+
+.zoom-inner:hover img {
+    filter: brightness(0.5);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+
 }
   
 .zoom-effect:hover .zoom-inner {
