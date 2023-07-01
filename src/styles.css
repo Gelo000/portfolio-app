@@ -46,31 +46,7 @@ html {
 
 .custom-padding-top-120{
     padding-top: 120px;
-}
-
-.custom-bg-darkgray {
-    background-image: 
-        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
-        linear-gradient(to right, rgba(0, 150, 125, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 150, 125, 0.2) 1px, transparent 1px);
-    background-size: 20px 20px;
-    background-color: rgb(65, 65, 65);
-    color: white;
-    background-attachment: fixed;
-    animation: downrightanimation 150s infinite linear;
-}
-
-@keyframes downrightanimation {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-  
+}  
 
 .custom-text-color-teal{
     color: rgb(0, 255, 213);
@@ -435,6 +411,40 @@ html {
 }
 
 .frosted-div {
-    background-color: #3f48472a !important;
+    background-color: #049c8b2a !important;
     backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px); /* Safari 9+, Safari on iOS 9+ */
+    -ms-backdrop-filter: blur(2px); /* Microsoft Edge */
+}
+
+#background-canvas{
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+    filter: blur(200px);
+    mix-blend-mode: darken;
+    opacity: 50%;
+}
+
+.custom-bg-darkgray {
+    background-image: 
+        linear-gradient(to right, rgba(0, 150, 125, 0.5) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    background-attachment: fixed;
+    animation: downrightanimation 150s infinite linear;
+}
+
+@keyframes downrightanimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
