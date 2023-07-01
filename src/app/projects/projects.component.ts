@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
+  isHovered: number | null = null;
 
+  toggleHoverState(index: number) {
+    this.isHovered = this.isHovered === index ? null : index;
+  }
 }
