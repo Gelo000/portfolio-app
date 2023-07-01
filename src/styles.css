@@ -426,7 +426,7 @@ html {
     min-height: 100vh;
     filter: blur(200px);
     mix-blend-mode: darken;
-    opacity: 50%;
+    opacity: 30%;
 }
 
 .custom-bg-darkgray {
