@@ -30,9 +30,9 @@ export class CircleCanvasAnimationComponent implements OnInit {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const getRandomHue = () => {
-      return Math.floor(Math.random() * 360);
-    };
+    // const getRandomHue = () => {
+    //   return Math.floor(Math.random() * 360);
+    // };
 
     const updateHue = () => {
       this.circles.forEach((circle: any, index: number) => {
@@ -46,8 +46,8 @@ export class CircleCanvasAnimationComponent implements OnInit {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 80 + 40,
-        dx: (Math.random() - 0.5) * 5,
-        dy: (Math.random() - 0.5) * 5,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5,
         color: ''
       };
 

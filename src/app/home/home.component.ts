@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   typedText: string = '';
-  fullText: string = 'Passionate web dev, studying to become a skilled front-end developer.';
+  fullText: string = 'Passionate web dev, studying to become a skilled software developer.';
   typingDelay: number = 80;
   
   constructor() { }
