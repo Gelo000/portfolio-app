@@ -41,13 +41,13 @@ export class CircleCanvasAnimationComponent implements OnInit {
       });
     };
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 40; i++) {
       const circle = {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 80 + 40,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5,
+        dx: (Math.random() - 0.5) * 0.2,
+        dy: (Math.random() - 0.5) * 0.2,
         color: ''
       };
 
