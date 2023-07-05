@@ -224,13 +224,14 @@ html {
 }
 
 #id-card-image{
-    background-color: #292e2e;
+    background-color: #292e2e00;
     border-radius: 25%;
     transform: rotate(8deg) scale(70%);
 }
 .card-img-top-box{
     transform: rotate(-8deg);
     background-color: #808080;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 25%;
 }
 
@@ -322,12 +323,14 @@ html {
   
 
 .container-home-center{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
+    /* background-color: #049c8b2a; */
     justify-content: center;
     align-items: center;
-    margin-top: -30px;
+    margin-top: -40px;
+    padding-top: 5em;
 }
 
 .main-container {
@@ -472,3 +475,12 @@ html {
         background-position: 100% 100%;
     }
 }
+.fa-2x{
+    color: #FFFFFF;
+    transition: 0.2s ease-in-out;
+}
+.fa-2x:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #00FED4;
+}
+  
