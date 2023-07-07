@@ -4,7 +4,6 @@
 
 /* width */
 html {
-    background-color: rgb(65, 65, 65);
     overflow-x: hidden;
 }
   
@@ -30,7 +29,7 @@ html {
 }
   
 .footer {
-    background-color: rgb(65, 65, 65);
+    background-color: #1f1f1fc5;
     color: rgb(0, 255, 213);
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -71,7 +70,7 @@ html {
 }
 
 .custom-welcome-text {
-    background-color: rgb(65, 65, 65);
+    background-color: #1f1f1fc5;
     color: rgb(0, 255, 213);
     display: flex;
     align-items: center;
@@ -89,7 +88,7 @@ html {
 
 .custom-button {
     color: rgb(0, 255, 213);
-    background-color: rgb(59, 59, 59);
+    background-color: #292929c5;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -114,7 +113,6 @@ html {
 .custom-navbar {
     border-radius: 1rem; /* Adjust the border-radius value to make the navbar more or less oval */
     overflow: hidden;
-    background-color: #3f4847;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -217,7 +215,7 @@ html {
 }
 
 #id-card-home{
-    background-color: #3f4847;
+    background-color: #1f1f1fc5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     margin-top: -10%;
@@ -259,7 +257,7 @@ html {
     padding-bottom: 5rem;
     line-height: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #3f4847;
+    background-color: #1f1f1fc5;
 }
 
 .fade-in-scroll-button {
@@ -410,7 +408,7 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: #1d1d1dd8;
     box-shadow: 0 4px 8px rgba(0, 255, 191, 0.2);
     color: rgb(0, 255, 213);
     border: none;
@@ -453,15 +451,16 @@ html {
     min-height: 100vh;
     filter: blur(200px);
     mix-blend-mode: darken;
-    opacity: 30%;
+    opacity: 10%;
 }
 
+/* Background Lines Animation */
 .custom-bg-darkgray {
     background-image: 
-        linear-gradient(to right, rgba(0, 150, 125, 0.5) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 150, 125, 0.5) 1px, transparent 1px);
+        linear-gradient(to right, rgba(0, 150, 125, 0.5) 0.3px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 150, 125, 0.5) 0.3px, transparent 1px);
     background-size: 20px 20px;
-    background-color: rgb(65, 65, 65);
+    background-color: #111111;
     color: white;
     background-attachment: fixed;
     animation: downrightanimation 150s infinite linear;
