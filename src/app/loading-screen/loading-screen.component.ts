@@ -20,7 +20,7 @@ export class LoadingScreenComponent implements AfterViewInit {
   }
 
   removeLoadingScreen(): Observable<any> {
-    return of(null).pipe(delay(3000));
+    return of(null).pipe(delay(3500)); // delay 3.5secs for the loading screen animation
   }
 
 }
