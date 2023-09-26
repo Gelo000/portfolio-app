@@ -18,15 +18,17 @@ export class HomeComponent implements OnInit {
   }
 
   typeText() {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      if (index < this.fullText.length) {
-        this.typedText += this.fullText.charAt(index);
-        index++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, this.typingDelay);
+    setTimeout(() => {
+      let index = 0;
+      const typingInterval = setInterval(() => {
+        if (index < this.fullText.length) {
+          this.typedText += this.fullText.charAt(index);
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, this.typingDelay);
+    }, 4000); // Add a 4-second delay before typing starts
   }
 }
 
